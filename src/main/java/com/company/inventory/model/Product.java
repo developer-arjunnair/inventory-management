@@ -1,6 +1,7 @@
 package com.company.inventory.model;
 
 import java.sql.Date;
+import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,8 +28,6 @@ public class Product {
   private Double price;
   private Double discount;
   private String createdBy;
-  private Date createdAt;
-  private Date updatedAt;
-
-
+  private Date createdAt = Date.valueOf(LocalDate.now());
+  private Date updatedAt = Date.valueOf(LocalDate.now());
 }
